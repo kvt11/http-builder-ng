@@ -2,6 +2,14 @@
 
 If you are itching to get started, here's what you need to do to get up and running.
 
+Note that http-builder-ng comes in three flavours, each one using a different HTTP client library:
+
+* http-builder-ng-core : based on the Java's `java.net.HttpURLConnection`
+* http-builder-ng-okhttp : based on https://square.github.io/okhttp/[OkHttp]
+* http-builder-ng-apache : based on https://hc.apache.org/httpcomponents-client-ga/[Aoache HttpClient]
+
+The code shown will use the default client library based on the Java HttpUrlConnection; however, you can also use the Apache HttpComponents or the OkHttp client libraries. See the section on Client-Related Configuration for more details on switching client implementations.
+
 === Using `http-builder-ng` in Groovy scripts
 
 An easy way to use `http-builder-ng` in a *Groovy* script is to import one of its client script flavours using https://groovy-lang.org/grape.html[Grape].
