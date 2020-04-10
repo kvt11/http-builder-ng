@@ -8,7 +8,8 @@ Note that http-builder-ng comes in three flavours, each one using a different HT
 * http-builder-ng-okhttp : based on https://square.github.io/okhttp/[OkHttp]
 * http-builder-ng-apache : based on https://hc.apache.org/httpcomponents-client-ga/[Apache HttpClient]
 
-The code shown will use the default client library based on the Java HttpUrlConnection; however, you can also use the Apache HttpComponents or the OkHttp client libraries. See the section on Client-Related Configuration for more details on switching client implementations.
+Choose the library you want to go on with.
+In most cases you can simply switch to another HTTP client library with no or minimal code changes.
 
 === Using `http-builder-ng` in Groovy scripts
 
