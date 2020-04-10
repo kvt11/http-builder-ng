@@ -8,13 +8,13 @@ An easy way to use `http-builder-ng` in a *Groovy* script is to import one of it
 
 [source,groovy]
 ----
-@Grab('io.github.http-builder-ng:http-builder-ng-core:1.0.4') //<1>
+@Grab('io.github.http-builder-ng:http-builder-ng-core:1.0.4') // <1>
 @Grab('org.jsoup:jsoup:1.13.1')
 
 import static groovyx.net.http.HttpBuilder.configure
 import org.jsoup.nodes.Document
 
-Document page = configure { //<2>
+Document page = configure { // <2>
     
     request.uri = 'http://www.apache.org/'
     request.headers['User-Agent'] = 'Apache-Groovy/3.0.2'
