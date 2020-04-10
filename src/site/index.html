@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">HttpBuilder-NG</a>
+                <a class="navbar-brand" href="/http-builder-ng/index.html">HttpBuilder-NG</a>
             </div>
 
             <div class="navbar-collapse collapse">
@@ -128,13 +128,14 @@
         self-contained usage examples. The following is a script which will extract the license information for Groovy from the Maven Repository site.</p>
 
     <pre style="prettify"><code>@Grab('io.github.http-builder-ng:http-builder-ng-core:1.0.4')
-@Grab('org.jsoup:jsoup:1.9.2')
+@Grab('org.jsoup:jsoup:1.13.1')
 
 import static groovyx.net.http.HttpBuilder.configure
 import org.jsoup.nodes.Document
 
 Document page = configure {
     request.uri = 'https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all'
+    request.headers['User-Agent'] = 'Apache-Groovy/3.0.2'
 }.get()
 
 String license = page.select('span.b.lic').collect { it.text() }.join(', ')
