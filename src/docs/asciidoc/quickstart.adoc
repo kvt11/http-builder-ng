@@ -6,7 +6,7 @@ Note that http-builder-ng comes in three flavours, each one using a different HT
 
 * http-builder-ng-core : based on the Java's `java.net.HttpURLConnection`
 * http-builder-ng-okhttp : based on https://square.github.io/okhttp/[OkHttp]
-* http-builder-ng-apache : based on https://hc.apache.org/httpcomponents-client-ga/[Aoache HttpClient]
+* http-builder-ng-apache : based on https://hc.apache.org/httpcomponents-client-ga/[Apache HttpClient]
 
 The code shown will use the default client library based on the Java HttpUrlConnection; however, you can also use the Apache HttpComponents or the OkHttp client libraries. See the section on Client-Related Configuration for more details on switching client implementations.
 
