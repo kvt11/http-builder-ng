@@ -2,6 +2,31 @@
 
 If you are itching to get started, here's what you need to do to get up and running.
 
+=== Using `http-builder-ng` in Groovy scripts
+
+An easy way to use `http-builder-ng` in a *Groovy* script is to import one of its client script flavours using https://groovy-lang.org/grape.html[Grape].
+
+[source,groovy]
+----
+@Grab('io.github.http-builder-ng:http-builder-ng-core:1.0.4') //<1>
+@Grab('org.jsoup:jsoup:1.13.1')
+
+import static groovyx.net.http.HttpBuilder.configure
+import org.jsoup.nodes.Document
+
+Document page = configure { //<2>
+    
+    request.uri = 'http://www.apache.org/'
+    request.headers['User-Agent'] = 'Apache-Groovy/3.0.2'
+
+}.get()
+
+println "Title of Apache main page: ${page.title()}"
+----
+<1> This example uses the `core` flavour.
+<2> Under the hoods the response is parsed by jsoup library
+
+
 === Add Library to Project
 
 First, you need the library in your project. If you are using Gradle, add the following dependency to your `build.gradle` file `dependencies` closure:
